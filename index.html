@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -13,41 +12,46 @@
     />
 
     <title>Frontend Mentor | Social proof section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main class="main">
-      <section class="article">
-        <!-- Encabezado con título y reviews -->
-        <div class="article__header-reviews">
-          <header class="article__top">
-            <h1 class="article__title">
+
+  <body
+    class="font-[league_spartan] flex justify-center items-center min-h-screen m-8 lg:m-4"
+  >
+    <main class="w-full max-w-6xl mx-auto px-6 lg:px-0">
+      <section class="lg:flex lg:flex-col lg:gap-16">
+        <!-- HEADER + REVIEWS -->
+        <div
+          class="lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-8"
+        >
+          <header class="text-center lg:text-left lg:max-w-lg lg:flex-[0.7]">
+            <h1 class="text-5xl text-[var(--very-dark-magenta)] font-bold">
               10,000+ of our users love our products.
             </h1>
-            <p class="article__description">
+
+            <p class="text-lg text-[var(--dark-grayish-magenta)] my-4">
               We only provide great products combined with excellent customer
               service. See what our satisfied customers are saying about our
               services.
             </p>
           </header>
 
-          <ul class="article__review">
-            <li class="article__review-item">
+          <!-- REVIEWS -->
+          <ul class="flex flex-col gap-4 my-8 lg:gap-6">
+            <!-- ITEM 1 -->
+            <li
+              class="bg-[var(--light-grayish-magenta)] flex flex-col items-center rounded-lg py-4 gap-2 lg:flex-row lg:justify-start lg:px-8 lg:gap-6"
+            >
               <div
-                class="article__review-item__stars"
+                class="flex justify-center items-center gap-1"
                 aria-label="5 star rating"
               >
                 <img
@@ -81,12 +85,17 @@
                   height="16"
                 />
               </div>
-              <p class="article__review-item__text">Rated 5 Stars in Reviews</p>
+              <p class="text-[var(--very-dark-magenta)] font-bold">
+                Rated 5 Stars in Reviews
+              </p>
             </li>
 
-            <li class="article__review-item">
+            <!-- ITEM 2 -->
+            <li
+              class="bg-[var(--light-grayish-magenta)] flex flex-col items-center rounded-lg py-4 gap-2 lg:flex-row lg:justify-start lg:px-8 lg:gap-6 lg:translate-x-8"
+            >
               <div
-                class="article__review-item__stars"
+                class="flex justify-center items-center gap-1"
                 aria-label="5 star rating"
               >
                 <img
@@ -120,14 +129,17 @@
                   height="16"
                 />
               </div>
-              <p class="article__review-item__text">
+              <p class="text-[var(--very-dark-magenta)] font-bold">
                 Rated 5 Stars in Report Guru
               </p>
             </li>
 
-            <li class="article__review-item">
+            <!-- ITEM 3 -->
+            <li
+              class="bg-[var(--light-grayish-magenta)] flex flex-col items-center rounded-lg py-4 gap-2 lg:flex-row lg:justify-start lg:px-8 lg:gap-6 lg:translate-x-16"
+            >
               <div
-                class="article__review-item__stars"
+                class="flex justify-center items-center gap-1"
                 aria-label="5 star rating"
               >
                 <img
@@ -161,81 +173,87 @@
                   height="16"
                 />
               </div>
-              <p class="article__review-item__text">
+              <p class="text-[var(--very-dark-magenta)] font-bold">
                 Rated 5 Stars in BestTech
               </p>
             </li>
           </ul>
         </div>
 
-        <!-- Testimonios -->
-        <section
-          class="article__testimonials"
-          aria-label="Customer testimonials"
-        >
-          <article class="article__testimonials-item">
-            <header class="article__testimonials-item__header">
+        <!-- TESTIMONIALS -->
+        <section class="flex flex-col gap-4 lg:flex-row lg:gap-4 lg:mx-8">
+          <!-- CARD 1 -->
+          <article
+            class="rounded-lg p-8 bg-[var(--very-dark-magenta)] lg:flex-1"
+          >
+            <header class="flex items-center gap-4">
               <img
-                class="article__testimonials-item__image"
+                class="rounded-full w-10 h-10"
                 src="./images/image-colton.jpg"
                 alt="Portrait of Colton Smith"
                 width="80"
                 height="80"
               />
-              <div class="article__testimonials-item__name-verified">
-                <h2 class="article__testimonials-item__name">Colton Smith</h2>
-                <p class="article__testimonials-item__verified">
-                  Verified Buyer
-                </p>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[var(--white)] text-lg font-medium">
+                  Colton Smith
+                </h2>
+                <p class="text-[var(--soft-pink)] text-lg">Verified Buyer</p>
               </div>
             </header>
-            <blockquote class="article__testimonials-item__text">
+            <blockquote class="text-[var(--white)] mt-7">
               “We needed the same printed design as the one we had ordered a
               week prior. Not only did they find the original order, but we also
               received it in time. Excellent!”
             </blockquote>
           </article>
 
-          <article class="article__testimonials-item">
-            <header class="article__testimonials-item__header">
+          <!-- CARD 2 -->
+          <article
+            class="rounded-lg p-8 bg-[var(--very-dark-magenta)] lg:flex-1 lg:translate-y-4"
+          >
+            <header class="flex items-center gap-4">
               <img
-                class="article__testimonials-item__image"
+                class="rounded-full w-10 h-10"
                 src="./images/image-irene.jpg"
                 alt="Portrait of Irene Roberts"
                 width="80"
                 height="80"
               />
-              <div class="article__testimonials-item__name-verified">
-                <h2 class="article__testimonials-item__name">Irene Roberts</h2>
-                <p class="article__testimonials-item__verified">
-                  Verified Buyer
-                </p>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[var(--white)] text-lg font-medium">
+                  Irene Roberts
+                </h2>
+                <p class="text-[var(--soft-pink)] text-lg">Verified Buyer</p>
               </div>
             </header>
-            <blockquote class="article__testimonials-item__text">
+            <blockquote class="text-[var(--white)] mt-7">
               “Customer service is always excellent and very quick turn around.
               Completely delighted with the simplicity of the purchase and the
               speed of delivery.”
             </blockquote>
           </article>
 
-          <article class="article__testimonials-item">
-            <header class="article__testimonials-item__header">
+          <!-- CARD 3 -->
+          <article
+            class="rounded-lg p-8 bg-[var(--very-dark-magenta)] lg:flex-1 lg:translate-y-8"
+          >
+            <header class="flex items-center gap-4">
               <img
-                class="article__testimonials-item__image"
+                class="rounded-full w-10 h-10"
                 src="./images/image-anne.jpg"
                 alt="Portrait of Anne Wallace"
                 width="80"
                 height="80"
               />
-              <div class="article__testimonials-item__name-verified">
-                <h2 class="article__testimonials-item__name">Anne Wallace</h2>
-                <p class="article__testimonials-item__verified">
-                  Verified Buyer
-                </p>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[var(--white)] text-lg font-medium">
+                  Anne Wallace
+                </h2>
+                <p class="text-[var(--soft-pink)] text-lg">Verified Buyer</p>
               </div>
             </header>
-            <blockquote class="article__testimonials-item__text">
+            <blockquote class="text-[var(--white)] mt-7">
               “Put an order with this company and can only praise them for the
               very high standard. Will definitely use them again and recommend
               them to everyone!”
